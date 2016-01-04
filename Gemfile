@@ -8,6 +8,7 @@ gem 'rails-api'
 gem 'spring', :group => :development
 
 gem 'mongoid', '~> 5.0.0'
+gem 'puma'
 gem 'oneapm'
 
 
