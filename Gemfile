@@ -10,6 +10,8 @@ gem 'spring', :group => :development
 gem 'mongoid', '~> 5.0.0'
 gem 'puma'
 gem 'oneapm_rpm'
+gem 'active_model_serializers'
+
 
 
 
