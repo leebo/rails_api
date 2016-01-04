@@ -1,8 +1,9 @@
 module TestApi
   class API < Grape::API
+    require 'grape/active_model_serializers'
+    include Grape::ActiveModelSerializers
     version 'v1'
     format :json
-    formatter :json, Grape::Formatter::ActiveModelSerializers
     prefix :api
     get '/' do
       'Hello Rails'

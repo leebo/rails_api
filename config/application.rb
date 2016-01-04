@@ -7,9 +7,9 @@ require "active_job/railtie"
 # require "active_record/railtie"
 require "action_controller/railtie"
 require "action_mailer/railtie"
-require "action_view/railtie"
+# require "action_view/railtie"
 require "sprockets/railtie"
-require "rails/test_unit/railtie"
+# require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -30,5 +30,6 @@ module RailsApi1
     # config.i18n.default_locale = :de
     config.paths.add File.join('app', 'api'), glob: File.join('**', '*.rb')
     config.autoload_paths += Dir[Rails.root.join('app', 'api', '*')]
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
   end
 end
