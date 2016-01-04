@@ -11,6 +11,8 @@ gem 'mongoid', '~> 5.0.0'
 gem 'puma'
 gem 'oneapm_rpm'
 gem 'active_model_serializers'
+gem 'grape'
+gem 'grape-active_model_serializers'
 
 
 

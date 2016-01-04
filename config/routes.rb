@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount TestApi::API => '/'
   resources :users, except: [:new, :edit] do
     collection do
       get "echo"
